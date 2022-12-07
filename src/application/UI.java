@@ -1,6 +1,5 @@
 package application;
 
-import java.sql.Array;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -60,6 +59,9 @@ public class UI {
 		System.out.println();
 		System.out.println("Turno: " + chessMatch.getTurn());
 		System.out.println("Aguardando Jogador: " + chessMatch.getCurrentPlayer());
+		if (chessMatch.getCheck()) {
+			System.out.println(ANSI_RED_BACKGROUND + "CHECK!" + ANSI_RESET);
+		}
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
